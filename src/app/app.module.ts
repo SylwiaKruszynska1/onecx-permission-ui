@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
-import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { RouterModule, Routes } from '@angular/router'
 import { provideTranslateService, provideTranslateLoader, provideMissingTranslationHandler } from '@ngx-translate/core'
 
@@ -46,8 +46,7 @@ const routes: Routes = [
     provideTranslationPathFromMeta(import.meta.url, 'assets/i18n/'),
     provideHttpClient(withInterceptorsFromDi()),
     provideStandaloneProviders(),
-    provideThemeConfig(),
-    provideAnimations()
+    provideThemeConfig()
   ]
 })
 export class AppModule {}
